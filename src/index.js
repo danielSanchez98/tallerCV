@@ -8,7 +8,7 @@ const express = require('express'),
 // Settings
 app.set('port', 3000);
 app.set('views', path.resolve(__dirname,'views'));
-app.set('view engine','ejs');
+app.set('view engine','ejs'); 
 
 
 // static files
