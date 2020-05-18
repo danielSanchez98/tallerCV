@@ -20,10 +20,34 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/',(req,res)=>{
 
-    res.render('index')
+    res.render('index');
 
 });
 
+app.get('/acerca',(req,res)=>{
+    res.render('acercaDeMi');
+
+});
+
+app.get('/experiencia',(req,res)=>{
+    res.render('experiencia');
+
+});
+
+app.get('/educacion',(req,res)=>{
+    res.render('educacion');
+
+});
+
+app.get('/idiomas',(req,res)=>{
+    res.render('idiomas');
+
+});
+
+app.get('/aptitudes',(req,res)=>{
+    res.render('aptitudes')
+
+});
 
 app.listen(app.get('port'),()=>{
     console.log(`Server on port ${app.get('port')}`);

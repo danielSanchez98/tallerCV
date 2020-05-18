@@ -1,44 +1,59 @@
-const navSlide = ()=>{
-    const burger= document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
-   
-    burger.addEventListener('click',()=>{
-         // toggle Nav
-        nav.classList.toggle('nav-active');
+window.addEventListener('load',showPage);
 
-         //Animate Links
-        navLinks.forEach((link,index)=>{
-            if(link.style.animation){
-                link.style.animation='';
-            }else{
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`
-            }
+   function showPage(){
+
+    
+    const navSlide = ()=>{
+        const burger= document.querySelector('.burger');
+        const navParent = document.querySelector('.black-nav');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+       
+        burger.addEventListener('click',()=>{
+             // toggle Nav
+            nav.classList.toggle('nav-active');    
+            navParent.classList.toggle('nav-active');
+          
+    
+             //Animate Links
+            navLinks.forEach((link,index)=>{
+                if(link.style.animation){
+                    link.style.animation='';
+                }else{
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`
+                   
+                }
+                
+            });
+
             
-        });
-        //Burger Animation
-
-        burger.classList.toggle('toggle');
-        burger.style.overflowY="hidden";
-    })
+            //Burger Animation
+    
+            burger.classList.toggle('toggle');
+            burger.style.overflowY="hidden";
+        })
+       
+    
+    }
+    
    
+    
+    
+    
+    const app = ()=>{
+        navSlide();
+    }
 
+    setTimeout(() => {
+        document.querySelector('.js-loading').classList.remove('js-loading');
+        document.querySelector('.home-contenedor').style.backgroundColor="rgba(0, 0, 0, 0.5)";        
+        app();
+
+    }, 600);
+           
+       
+        
 }
-
-const textAnimation= ()=>{
-    const text= document.querySelectorAll('#textPresentation path');
-
-    text.forEach((letra,index)=>{
-        console.log(`Letra ${index} is ${letra.getTotalLength()}`);
-    })
-
-};
+    
 
 
-
-const app = ()=>{
-    navSlide();
-    textAnimation();
-}
-
-app();

@@ -4,8 +4,20 @@
     box-sizing: border-box;
     overflow-x: hidden;
 }
-body{
-    background-color: black;
+
+.js-loading{
+    display: none;
+}
+
+
+.home-contenedor{    
+    
+    background: url('/img/home.jpg') no-repeat  center;
+    background-size: 100%;
+    background-blend-mode: color;   
+    animation: opacityBack 2s ease ;
+    
+
 }
 /*  navegacion */
 
@@ -13,25 +25,32 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 9vh;
-    background-color: black;
+    min-height: 10vh;
+    background-color: transparent;
     font-family: 'Poppins', sans-serif;
+    z-index: 1;
 }
+.black-nav{
+    position: absolute;
+    min-height: 10vh;
+    background-color: black;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in;
 
-.logo{
 
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
+}
+.logo{     
     margin-left: 5%;
+    margin-top: 1%;
+    z-index: 1;
 }
 .nav-links{
     justify-content: space-around;
     position: absolute;
     right: 0px;
-    height: 92vh;
-    top:8vh;
+    height: 91vh;
+    top:10vh;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -56,6 +75,7 @@ nav{
     display: block;
     cursor: pointer;
     margin-right: 5%;
+    z-index: 1;
 }
 .burger div{
     width: 35px;
@@ -80,6 +100,11 @@ nav{
 
 .nav-active{
     transform: translateX(0%);
+}
+
+.nav-tag-active{
+    /* background-color: black; */
+    animation: navFade 2s ease ;
 }
 
 /*   texto de home    */
@@ -196,6 +221,123 @@ nav{
     animation: textAnim 2s ease forwards 1.5s;
 
 }
+main{
+    height: 91vh;
+}
+/*   footer  */
+footer{
+    display: block;
+}
+.footer-contenedor{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
+    min-height: 15vh;
+    color: white;
+
+}
+.contacto{
+    margin-top: 2vh;
+    margin-left: 6%;
+    font-family: 'Poppins';
+}
+
+.contacto h2{
+    margin-bottom: 1.5vh;
+    border-bottom: 3px solid #7A7A7A;
+    
+}
+.logo-footer{
+    align-self: center;
+}
+.nombre-footer{
+    align-self: center;
+   /*  margin-right: 23vh; */
+    
+    
+}
+.nombre-footer span{
+    font-family: 'Poppins';
+    color: #7A7A7A ;
+    font-size: 22px;
+}
+ .fechaNombre{
+    font-size: 22px;
+}
+.rights{
+    font-size: 16px;
+}
+
+
+/* EDUCACION */
+
+
+/* tarjeta estudios*/
+.estudios-home{
+    background: no-repeat center;
+    background-size: 100%;
+    
+    min-height: 100vh;
+    background-blend-mode: color;   
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    
+}
+.estudios{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.estudios-img-user{
+    width: 100vh;
+    height: 100vh;
+}
+.estudios-img-user img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.tarjeta-estudios{
+    display: flex;
+    min-height: 20vh;
+    width: 80%;    
+    margin: 1vh 0 2vh 0;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
+    
+}
+.imagen-estudios{
+    display: flex;
+    width: 23%;
+    min-height: 17vh;
+    align-self: center;
+    border-radius: 50%;
+    justify-content: center;
+    
+}
+.imagen-estudios img{
+   align-self: center;
+    width: 80%;
+    height: 15vh;
+    object-fit: contain;
+}
+.info-estudios{
+    width: 77%;
+    min-height: 15vh;
+    align-self: center;
+    border-left: 2px solid black;
+    
+}
+.info-estudios h2{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+.info-estudios p{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 20px;
+} 
+
 
 
 
@@ -235,6 +377,14 @@ nav{
 }
 
 
+@keyframes opacityBack{
+    from{
+        background-color: rgba(0, 0, 0, 0.1) ;
+    }
+    to{
+        background-color: rgba(0, 0, 0, 0.5) ;
+    }
+}
 
 @keyframes navLinkFade{
     from{
@@ -244,6 +394,13 @@ nav{
     to{
         opacity: 1;
         transform: translateX(0%);
+    }
+
+}
+@keyframes navFade{
+   
+    to{
+        background-color: black;
     }
 
 }
@@ -257,6 +414,6 @@ nav{
         fill: transparent;
     }
     to{
-        fill: white;
+        fill: #CACACA;
     }
 }
