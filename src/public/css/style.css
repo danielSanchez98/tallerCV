@@ -369,7 +369,7 @@ footer{
     text-align: center;
     font-size: 20px;
 } 
-
+/* FIN ESTUDIOS */
 
 
 /*   IDIOMAS   */
@@ -413,6 +413,8 @@ footer{
 } 
 
 
+/* FIN IDIOMAS */
+
 /*    EXPERIENCIA */
 .experiencia{
     display: flex;
@@ -424,8 +426,49 @@ footer{
     justify-content: center;
     
 }
-
-
+.tarjeta-experiencia{
+    display: flex;
+    min-height: 20vh;
+    width: 70%;    
+    margin: 1vh 0 2vh 0;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
+    
+}
+.imagen-experiencia{
+    display: flex;
+    width: 23%;
+    min-height: 17vh;
+    align-self: center;
+    border-radius: 50%;
+    justify-content: center;
+    
+}
+.imagen-experiencia img{
+   align-self: center;
+    width: 80%;
+    height: 15vh;
+    object-fit: contain;
+}
+.info-experiencia{
+    width: 75%;
+    min-height: 15vh;    
+    align-self: center;
+    border-left: 2px solid black;
+    padding: 10px;
+    
+}
+.info-experiencia h2{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+.info-experiencia p{
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 2%;
+} 
+/* EXPERIENCIA */
 
 /* APTITUDES */
 .info-aptitudes{
@@ -471,7 +514,7 @@ footer{
     min-height: 4vh;
 }
 .css{
-    width: 60%;
+    width: 50%;
     background-color: rgb(209, 189, 4);
     min-height: 4vh;
 }
@@ -491,8 +534,8 @@ footer{
     min-height: 4vh;
 }
 .mysql{
-    width: 55%;
-    background-color: rgb(209, 189, 4);
+    width: 60%;
+    background-color: #4CAF50;
     min-height: 4vh;
 }
 .python{
@@ -500,7 +543,7 @@ footer{
     background-color: rgb(209, 189, 4);
     min-height: 4vh;
 }
-
+/* FIN APTITUDES */
 
 /*   Animaciones & media        */
 
