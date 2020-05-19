@@ -437,15 +437,68 @@ footer{
 }
 .info-aptitudes h2{
     font-family: 'Poppins', sans-serif;
+    
     text-align: center;
     margin-bottom: 2vh;
 }
 .progreso{
     align-self: center;
     width: 80%;
+    min-height: 4vh;
     background-color: #ddd;
     text-align: center;
     margin: auto;
+}
+.bar{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.bar span{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 1%;
+    color: white;
+}
+.c{
+    width: 80%;
+    background-color: #4CAF50;
+    min-height: 4vh;
+}
+.cplus{
+    width: 70%;
+    background-color: #4CAF50;
+    min-height: 4vh;
+}
+.css{
+    width: 60%;
+    background-color: rgb(209, 189, 4);
+    min-height: 4vh;
+}
+.html{
+    width: 90%;
+    background-color: #4CAF50;
+    min-height: 4vh;
+}
+.js{
+    width: 80%;
+    background-color: #4CAF50;
+    min-height: 4vh;
+}
+.mongo{
+    width: 65%;
+    background-color: #4CAF50;
+    min-height: 4vh;
+}
+.mysql{
+    width: 55%;
+    background-color: rgb(209, 189, 4);
+    min-height: 4vh;
+}
+.python{
+    width: 55%;
+    background-color: rgb(209, 189, 4);
+    min-height: 4vh;
 }
 
 
