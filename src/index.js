@@ -22,10 +22,11 @@ app.use(cookieSession({secret: "I'm a secret"}));
 
 app.get('/',(req,res)=>{
 
-    res.render('index');
+    
     req.session.visitas || (req.session.visitas=0);
     let n=req.session.visitas++;
     console.log(n);
+    res.render('index');
 
 });
 
