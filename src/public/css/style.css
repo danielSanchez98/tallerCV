@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .js-loading{
@@ -30,9 +31,14 @@ nav{
     justify-content: space-between;
     align-items: center;
     min-height: 10vh;
+    width: 100%;
     background-color: transparent;
     font-family: 'Poppins', sans-serif;
     z-index: 1;
+    
+    transition: all 0.3s ease-in-out;
+    
+    
 }
 .black-nav{
     position: absolute;
@@ -41,7 +47,18 @@ nav{
     width: 100%;
     transform: translateX(100%);
     transition: transform 0.6s ease-in;
+    
 
+
+}
+.shrink{
+    height: 5vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: hidden;
+    background-color: black;
 
 }
 .logo{     
@@ -273,7 +290,14 @@ footer{
     font-size: 16px;
 }
 
+#textPages {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 
+
+}
 /* EDUCACION */
 
 
@@ -289,9 +313,13 @@ footer{
 }
 .estudios{
     display: flex;
+    height: 85vh;
     align-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    border-top: 50px solid black;
+    justify-content: center;
+    
 }
 .estudios-img-user{
     width: 100vh;
@@ -304,7 +332,7 @@ footer{
 .tarjeta-estudios{
     display: flex;
     min-height: 20vh;
-    width: 80%;    
+    width: 70%;    
     margin: 1vh 0 2vh 0;
     box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
     
@@ -383,6 +411,43 @@ footer{
     text-align: center;
     font-size: 60px;
 } 
+
+
+/*    EXPERIENCIA */
+.experiencia{
+    display: flex;
+    min-height: 85vh;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-top: 50px solid black;
+    justify-content: center;
+    
+}
+
+
+
+/* APTITUDES */
+.info-aptitudes{
+    width: 77%;
+    min-height: 15vh;
+    align-self: center;
+    border-left: 2px solid black;
+    margin: auto;
+}
+.info-aptitudes h2{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+.progreso{
+    align-self: center;
+    width: 80%;
+    background-color: #ddd;
+    text-align: center;
+    margin: auto;
+}
+
 
 /*   Animaciones & media        */
 

@@ -6,7 +6,7 @@ window.addEventListener('load',showPage);
     const navSlide = ()=>{
         const nava = document.querySelector('nav');
         const burger= document.querySelector('.burger');
-        const navParent = document.querySelector('.black-nav');
+        const blackNav = document.querySelector('.black-nav');
         const nav = document.querySelector('.nav-links');
         const navLinks = document.querySelectorAll('.nav-links li');
         let offsetY=0;
@@ -14,10 +14,11 @@ window.addEventListener('load',showPage);
         burger.addEventListener('click',()=>{
              // toggle Nav
             
-            nava.classList.remove('shrink');
+             nava.classList.remove('shrink');
             nav.classList.toggle('nav-active');    
-            navParent.classList.toggle('nav-active');
-          
+            blackNav.classList.toggle('nav-active');
+           
+            
     
              //Animate Links
             navLinks.forEach((link,index)=>{
@@ -44,10 +45,13 @@ window.addEventListener('load',showPage);
                 window.scrollTo(0,0);
                 document.querySelector('*').style.overflowY="hidden";
             }
+
+            
         })
        
     
     }
+    
     const shrinkNav = ()=>{
         const nava = document.querySelector('nav');
         
@@ -76,16 +80,12 @@ window.addEventListener('load',showPage);
         shrinkNav();
     }
 
-    setTimeout(() => {
-        document.querySelector('.js-loading').classList.remove('js-loading');
-        document.querySelector('.home-contenedor').style.backgroundColor="rgba(0, 0, 0, 0.5)";        
+    setTimeout(() => {   
         app();
 
-    }, 600);
+    }, 100);
            
        
         
 }
     
-
-
