@@ -11,8 +11,10 @@ app.set('views', path.resolve(__dirname,'views'));
 app.set('view engine','ejs'); 
 
 
-// static files
+// static files & middlewares
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser());
+app.use(cookieSession({secret: "I'm a secret"}));
 
 
 
@@ -21,6 +23,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/',(req,res)=>{
 
     res.render('index');
+    req.session.visitas || (req.session.visitas=0);
+    let n=req.session.visitas++;
+    console.log(n);
 
 });
 
