@@ -470,6 +470,77 @@ footer{
 } 
 /* EXPERIENCIA */
 
+/* ABOUT ME */
+
+
+.acerca-de-mi{
+    display: flex;
+    min-height: 85vh;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-top: 50px solid black;
+    justify-content: center;
+    
+}
+
+.tarjeta-acerca{
+    display: flex;
+    min-height: 20vh;
+    width: 70%;    
+    margin: 5vh 0 2vh 0;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
+    
+}
+.imagen-acerca{
+    display: flex;
+    width: 25%;
+    min-height: 20vh;
+    align-self: center;
+    border-radius: 50%;
+    justify-content: center;
+    
+    
+    
+}
+.imagen-acerca img{
+   align-self: center;
+   border-radius: 50%;
+    width: auto;
+    height: 16vh;
+    object-fit: contain;
+}
+.info-acerca{
+    width: 75%;
+    min-height: 15vh;    
+    align-self: center;
+    border-left: 2px solid black;
+    padding: 10px;
+    
+}
+#foto-right{
+    width: 75%;
+    min-height: 15vh;    
+    align-self: center;
+    border-right: 2px solid black;
+    border-left: none;
+    padding: 10px;
+    
+}
+.info-acerca h2{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+.info-acerca p{
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 2%;
+} 
+#avatar{
+    height: 22vh;
+}
 /* APTITUDES */
 .info-aptitudes{
     width: 77%;
