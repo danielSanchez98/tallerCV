@@ -609,6 +609,11 @@ footer{
     background-color: #4CAF50;
     min-height: 4vh;
 }
+.php{
+    width: 75%;
+    background-color: #4CAF50;
+    min-height: 4vh;
+}
 .python{
     width: 55%;
     background-color: rgb(209, 189, 4);
