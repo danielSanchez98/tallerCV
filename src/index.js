@@ -25,7 +25,7 @@ app.get('/',(req,res)=>{
     
     req.session.visitas || (req.session.visitas=0);
     let n=req.session.visitas++;
-    console.log(n);
+    console.log(`Has visitado la pagina principal ${n} veces`);
     res.render('index');
 
 });
